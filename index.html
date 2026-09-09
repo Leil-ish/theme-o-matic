@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Theme-O-Matic</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="machine">
+    <header>
+      <h1>THEME-O-MATIC <span class="model">v1</span></h1>
+      <p class="tagline">discussion theme generator, calibrated to taste</p>
+    </header>
+
+    <div class="screen">
+      <div class="screen-row">
+        <span class="label">DAY</span>
+        <span id="day-counter" class="counter">000000</span>
+      </div>
+      <div class="theme-display">
+        <div class="theme-label">TODAY'S THEME <span id="level-badge" class="level-badge"></span></div>
+        <div id="theme-text" class="theme-text">— press GENERATE —</div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <label for="unhinged-slider" class="slider-label">
+        UNHINGED LEVEL: <span id="level-name">2</span>
+      </label>
+      <input type="range" id="unhinged-slider" min="1" max="5" step="1" value="2" />
+      <div class="slider-ticks">
+        <span>wholesome</span>
+        <span>spicy</span>
+        <span>chaotic</span>
+        <span>feral</span>
+        <span>unhinged</span>
+      </div>
+
+      <div class="button-row">
+        <button id="today-btn" class="btn primary">TODAY'S OFFICIAL THEME</button>
+        <button id="reroll-btn" class="btn">REROLL (RANDOM)</button>
+      </div>
+    </div>
+
+    <div class="history">
+      <div class="history-header">
+        <span>PAST THEMES</span>
+        <button id="clear-history" class="btn small">clear</button>
+      </div>
+      <ul id="history-list"></ul>
+    </div>
+  </div>
+
+  <footer>
+    <p>synced by date — same theme for everyone on the same day, at the same level.</p>
+  </footer>
+
+  <script src="themes.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
